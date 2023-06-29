@@ -1,0 +1,19 @@
+<ng-container *ngIf="!(loadingUsers$ | async) else showLoading">
+
+  <ul>
+    <li *ngFor="let user of users$ | async">
+      {{user.name}}
+    </li>
+  </ul>
+</ng-container>
+
+
+<ng-template #showLoading >
+  Loading Users
+</ng-template>
+
+
+<div *ngIf="userErrorMsg$ | async" >
+  {{userErrorMsg$ | async}}
+</div>
+<br>

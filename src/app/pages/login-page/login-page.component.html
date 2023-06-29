@@ -1,0 +1,7 @@
+<p>login-page works!</p>
+
+<form [formGroup]='loginForm'>
+  <input type="text" formControlName='username' placeholder="username">
+  <input type='password' formControlName="password" placeholder="password">
+  <button (click)=login() [disabled]="loginForm.invalid">Login</button>
+</form>

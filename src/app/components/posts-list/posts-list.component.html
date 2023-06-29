@@ -1,0 +1,12 @@
+
+<ul>
+  <li *ngFor="let pu of postAndUser$ | async">
+    {{pu.post.title}} : {{pu.user.name}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let post of posts$ | async ">
+    {{post.title}}
+  </li>
+</ul>
